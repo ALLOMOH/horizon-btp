@@ -28,6 +28,8 @@
             --float-bottom: 24px;              /* Distance from bottom */
             --float-right: 24px;               /* Distance from right */
             --float-position: 1000;           /* Z-index */
+
+            --progress-color:orange;
         }
 
         /* ============================================================================= */
@@ -46,6 +48,17 @@
             font-family: 'DM Sans', sans-serif;
             background-color: var(--bg);
             color: var(--fg);
+        }
+
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: var(--progress-height, 4px);
+            background: linear-gradient(90deg, var(--progress-color) 0%, var(--accent-hover) 100%);
+            z-index: 9999;
+            transition: width 0.1s ease-out;
         }
 
         .font-display {
