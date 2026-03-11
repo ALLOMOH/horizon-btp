@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizon BTP & Engineering | Construction et Génie Civil en Côte d'Ivoire</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <script src="/tailwind.config.js"></script>
+</head>
+<body class="antialiased">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="#home" class="flex items-center gap-3">
+                    <div class="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="font-display text-2xl text-white tracking-wider">HORIZON BTP</span>
+                        <span class="block text-xs text-gray-400 tracking-widest uppercase">Engineering</span>
+                    </div>
+                </a>
+
+                <div class="hidden lg:flex items-center gap-8">
+                    <a href="#home" class="nav-link text-gray-300 hover:text-white">Accueil</a>
+                    <a href="#about" class="nav-link text-gray-300 hover:text-white">A Propos</a>
+                    <a href="#services" class="nav-link text-gray-300 hover:text-white">Services</a>
+                    <a href="#projects" class="nav-link text-gray-300 hover:text-white">Projets</a>
+                    <a href="#why-us" class="nav-link text-gray-300 hover:text-white">Pourquoi Nous</a>
+                    <a href="#contact" class="nav-link text-gray-300 hover:text-white">Contact</a>
+                    <button data-whatsapp-context="nav_quote" class="btn-primary px-6 py-3 rounded-lg text-white font-semibold flex items-center gap-2">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        Devis Gratuit
+                    </button>
+                </div>
+
+                <button id="mobile-toggle" class="lg:hidden p-2 text-white" aria-label="Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu fixed inset-y-0 right-0 w-80 bg-navy-900 z-50 p-8 lg:hidden">
+        <button id="mobile-close" class="absolute top-6 right-6 text-white" aria-label="Fermer">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+        </button>
+        <nav class="flex flex-col gap-6 mt-16">
+            <a href="#home" class="text-xl text-white hover:text-orange-500 transition-colors">Accueil</a>
+            <a href="#about" class="text-xl text-white hover:text-orange-500 transition-colors">A Propos</a>
+            <a href="#services" class="text-xl text-white hover:text-orange-500 transition-colors">Services</a>
+            <a href="#projects" class="text-xl text-white hover:text-orange-500 transition-colors">Projets</a>
+            <a href="#why-us" class="text-xl text-white hover:text-orange-500 transition-colors">Pourquoi Nous</a>
+            <a href="#contact" class="text-xl text-white hover:text-orange-500 transition-colors">Contact</a>
+            <button data-whatsapp-context="mobile_quote" class="btn-primary px-6 py-3 rounded-lg text-white font-semibold text-center mt-4">
+                Demander un Devis
+            </button>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg min-h-screen relative overflow-hidden">
+        <div class="gradient-mesh absolute inset-0"></div>
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <div class="absolute top-20 right-10 w-96 h-96 border border-navy-600/30 rounded-full animate-spin" style="animation-duration: 30s;"></div>
+            <div class="absolute bottom-40 left-10 w-64 h-64 border border-orange-500/10 rounded-full animate-spin" style="animation-duration: 20s; animation-direction: reverse;"></div>
+        </div>
+
+        <div class="relative z-10 min-h-screen flex items-center">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
+                <div class="max-w-4xl">
+                    <div class="overflow-hidden mb-4">
+                        <span class="inline-block text-orange-500 font-semibold tracking-widest uppercase text-sm reveal" style="transition-delay: 0.1s;">Leader en Construction en Cote d'Ivoire</span>
+                    </div>
+                    <h1 class="font-display text-5xl sm:text-7xl lg:text-8xl text-white leading-none mb-6 reveal" style="transition-delay: 0.2s;">
+                        Construisons les <span class="text-orange-500">Fondations</span> de Demain
+                    </h1>
+                    <p class="text-xl text-gray-300 max-w-2xl mb-10 reveal" style="transition-delay: 0.3s;">
+                        Horizon BTP & Engineering livre des projets de construction et d'infrastructure de haute qualite a travers la Cote d'Ivoire. Expertise, fiabilite et excellence a chaque etape.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 reveal" style="transition-delay: 0.4s;">
+                        <button data-whatsapp-context="hero_quote" class="btn-primary px-8 py-4 rounded-lg text-white font-semibold text-lg flex items-center justify-center gap-3">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            Demander un Devis Gratuit
+                        </button>
+                        <a href="#projects" class="btn-outline px-8 py-4 rounded-lg text-white font-semibold text-lg text-center">
+                            Voir Nos Projets
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="relative py-20 bg-navy-800 overflow-hidden">
+        <div class="stats-pattern absolute inset-0"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 stagger-container" id="stats-container">
+                <div class="text-center stagger-item">
+                    <div class="text-5xl lg:text-6xl font-display text-orange-500 mb-2"><span class="counter" data-target="150">0</span>+</div>
+                    <p class="text-gray-400">Projets Realises</p>
+                </div>
+                <div class="text-center stagger-item">
+                    <div class="text-5xl lg:text-6xl font-display text-orange-500 mb-2"><span class="counter" data-target="12">0</span>+</div>
+                    <p class="text-gray-400">Annees d'Experience</p>
+                </div>
+                <div class="text-center stagger-item">
+                    <div class="text-5xl lg:text-6xl font-display text-orange-500 mb-2"><span class="counter" data-target="85">0</span>+</div>
+                    <p class="text-gray-400">Experts & Ingenieurs</p>
+                </div>
+                <div class="text-center stagger-item">
+                    <div class="text-5xl lg:text-6xl font-display text-orange-500 mb-2"><span class="counter" data-target="98">0</span>%</div>
+                    <p class="text-gray-400">Satisfaction Client</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 lg:py-32 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-navy-800/50 to-transparent"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="reveal-left">
+                    <span class="text-orange-500 font-semibold tracking-widest uppercase text-sm">A Propos de Nous</span>
+                    <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl text-white mt-4 mb-6">Construire l'Avenir de la Cote d'Ivoire</h2>
+                    <p class="text-gray-300 text-lg mb-6">
+                        Horizon BTP & Engineering est une entreprise privee de construction et de genie civil basee a Abidjan. Depuis notre creation, nous nous sommes engages a livrer des projets d'infrastructure et de batiment de la plus haute qualite.
+                    </p>
+                    <p class="text-gray-400 mb-8">
+                        Notre mission est de contribuer au developpement de la Cote d'Ivoire en construisant des infrastructures durables, securisees et innovantes. Nous travaillons avec des developpeurs immobiliers, des investisseurs prives, des hotels, et des entreprises industrielles.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-lg bg-orange-500/10 flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            </div>
+                            <div><h4 class="text-white font-semibold">Qualite</h4><p class="text-gray-400 text-sm">Standards internationaux</p></div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-lg bg-orange-500/10 flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                            </div>
+                            <div><h4 class="text-white font-semibold">Securite</h4><p class="text-gray-400 text-sm">Normes rigoureuses</p></div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-lg bg-orange-500/10 flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                            </div>
+                            <div><h4 class="text-white font-semibold">Innovation</h4><p class="text-gray-400 text-sm">Technologies modernes</p></div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-lg bg-orange-500/10 flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            </div>
+                            <div><h4 class="text-white font-semibold">Fiabilite</h4><p class="text-gray-400 text-sm">Delais respectes</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reveal-right relative">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=80" alt="Construction site" class="rounded-2xl w-full h-[500px] object-cover">
+                        <div class="absolute -bottom-6 -left-6 bg-navy-800 p-6 rounded-xl border border-navy-600">
+                            <div class="text-4xl font-display text-orange-500">12+</div>
+                            <div class="text-gray-300">Annees d'Excellence</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 lg:py-32 bg-navy-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <span class="text-orange-500 font-semibold tracking-widest uppercase text-sm">Nos Services</span>
+                <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl text-white mt-4 mb-6">Solutions Completes de Construction</h2>
+                <p class="text-gray-400 text-lg">Nous offrons une gamme complete de services de construction et de genie civil pour repondre a tous vos besoins.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 stagger-container" id="services-container">
+                <!-- Services generated with data attributes -->
+                <div class="service-card p-8 rounded-2xl stagger-item">
+                    <div class="service-icon w-16 h-16 rounded-xl bg-navy-700 flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                    </div>
+                    <h3 class="font-display text-2xl text-white mb-4">Genie Civil</h3>
+                    <p class="text-gray-400 mb-6">Etudes techniques, dimensionnement des structures, et supervision des travaux de genie civil pour tous types de projets.</p>
+                    <button data-whatsapp-context="service_civil" class="text-orange-500 font-semibold flex items-center gap-2 hover:gap-3 transition-all group">
+                        Discuter sur WhatsApp
+                        <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    </button>
+                </div>
+
+                <div class="service-card p-8 rounded-2xl stagger-item">
+                    <div class="service-icon w-16 h-16 rounded-xl bg-navy-700 flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
+                    </div>
+                    <h3 class="font-display text-2xl text-white mb-4">Construction Routiere</h3>
+                    <p class="text-gray-400 mb-6">Construction et renovation de routes, autoroutes et voiries urbaines avec des materiaux de haute qualite.</p>
+                    <button data-whatsapp-context="service_road" class="text-orange-500 font-semibold flex items-center gap-2 hover:gap-3 transition-all group">
+                        Discuter sur WhatsApp
+                        <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    </button>
+                </div>
+
+                <div class="service-card p-8 rounded-2xl stagger-item">
+                    <div class="service-icon w-16 h-16 rounded-xl bg-navy-700 flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+                    </div>
+                    <h3 class="font-display text-2xl text-white mb-4">Construction de Batiments</h3>
+                    <p class="text-gray-400 mb-6">Construction residentielle et commerciale: immeubles, hotels, centres commerciaux et complexes residentiels.</p>
+                    <button data-whatsapp-context="service_building" class="text-orange-500 font-semibold flex items-center gap-2 hover:gap-3 transition-all group">
+                        Discuter sur WhatsApp
+                        <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    </button>
+                </div>
+
+                <div class="service-card p-8 rounded-2xl stagger-item">
+                    <div class="service-icon w-16 h-16 rounded-xl bg-navy-700 flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/></svg>
+                    </div>
+                    <h3 class="font-display text-2xl text-white mb-4">Developpement d'Infrastructures</h3>
+                    <p class="text-gray-400 mb-6">Ponts, tunnels, systemes d'assainissement et reseaux d'eau potable pour le developpement urbain.</p>
+                    <button data-whatsapp-context="service_infra" class="text-orange-500 font-semibold flex items-center gap-2 hover:gap-3 transition-all group">
+                        Discuter sur WhatsApp
+                        <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    </button>
+                </div>
+
+                <div class="service-card p-8 rounded-2xl stagger-item">
+                    <div class="service-icon w-16 h-16 rounded-xl bg-navy-700 flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+                    </div>
+                    <h3 class="font-display text-2xl text-white mb-4">Construction Industrielle</h3>
+                    <p class="text-gray-400 mb-6">Usines, entrepots, installations industrielles et plateformes logistiques aux normes internationales.</p>
+                    <button data-whatsapp-context="service_industrial" class="text-orange-500 font-semibold flex items-center gap-2 hover:gap-3 transition-all group">
+                        Discuter sur WhatsApp
+                        <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    </button>
+                </div>
+
+                <div class="service-card p-8 rounded-2xl stagger-item">
+                    <div class="service-icon w-16 h-16 rounded-xl bg-navy-700 flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/></svg>
+                    </div>
+                    <h3 class="font-display text-2xl text-white mb-4">Gestion de Projets</h3>
+                    <p class="text-gray-400 mb-6">Supervision, coordination et gestion complete de vos projets de construction de la conception a la livraison.</p>
+                    <button data-whatsapp-context="service_management" class="text-orange-500 font-semibold flex items-center gap-2 hover:gap-3 transition-all group">
+                        Discuter sur WhatsApp
+                        <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 lg:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <span class="text-orange-500 font-semibold tracking-widest uppercase text-sm">Nos Realisations</span>
+                <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl text-white mt-4 mb-6">Projets Realises</h2>
+                <p class="text-gray-400 text-lg">Decouvrez quelques-uns de nos projets les plus emblematiques realises a travers la Cote d'Ivoire.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 stagger-container" id="projects-container">
+                <!-- Project 1 -->
+                <div class="project-card relative rounded-2xl overflow-hidden group stagger-item">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80" alt="Immeuble residentiel" class="w-full h-80 object-cover">
+                    <div class="project-overlay absolute inset-0 flex flex-col justify-end p-8">
+                        <span class="text-orange-500 text-sm font-semibold mb-2">Batiment Residentiel</span>
+                        <h3 class="font-display text-3xl text-white mb-2">Complexe Residentiel Les Cocotiers</h3>
+                        <p class="text-gray-300 mb-4">Abidjan, Plateau - 120 unites residentielles de standing</p>
+                        <button data-whatsapp-context="project_cocotiers" class="btn-primary px-6 py-3 rounded-lg text-white font-semibold w-fit flex items-center gap-2">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            Discuter ce Projet
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card relative rounded-2xl overflow-hidden group stagger-item">
+                    <img src="https://images.unsplash.com/photo-1515162816999-a0c47dc192f7?w=800&q=80" alt="Autoroute" class="w-full h-80 object-cover">
+                    <div class="project-overlay absolute inset-0 flex flex-col justify-end p-8">
+                        <span class="text-orange-500 text-sm font-semibold mb-2">Infrastructure Routiere</span>
+                        <h3 class="font-display text-3xl text-white mb-2">Autoroute Abidjan-Yamoussoukro</h3>
+                        <p class="text-gray-300 mb-4">Section de 30km - Travaux de viabilisation et d'elargissement</p>
+                        <button data-whatsapp-context="project_highway" class="btn-primary px-6 py-3 rounded-lg text-white font-semibold w-fit flex items-center gap-2">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            Discuter ce Projet
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card relative rounded-2xl overflow-hidden group stagger-item">
+                    <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&q=80" alt="Pont" class="w-full h-80 object-cover">
+                    <div class="project-overlay absolute inset-0 flex flex-col justify-end p-8">
+                        <span class="text-orange-500 text-sm font-semibold mb-2">Infrastructure</span>
+                        <h3 class="font-display text-3xl text-white mb-2">Pont de la Lagune Ebrie</h3>
+                        <p class="text-gray-300 mb-4">Abidjan - Pont mixte acier-beton de 450 metres</p>
+                        <button data-whatsapp-context="project_bridge" class="btn-primary px-6 py-3 rounded-lg text-white font-semibold w-fit flex items-center gap-2">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            Discuter ce Projet
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card relative rounded-2xl overflow-hidden group stagger-item">
+                    <img src="https://images.unsplash.com/photo-1567521464027-f127ff144326?w=800&q=80" alt="Hotel" class="w-full h-80 object-cover">
+                    <div class="project-overlay absolute inset-0 flex flex-col justify-end p-8">
+                        <span class="text-orange-500 text-sm font-semibold mb-2">Batiment Commercial</span>
+                        <h3 class="font-display text-3xl text-white mb-2">Hotel 5 Etoiles Riviera</h3>
+                        <p class="text-gray-300 mb-4">Abidjan, Riviera - 200 chambres et suites de luxe</p>
+                        <button data-whatsapp-context="project_hotel" class="btn-primary px-6 py-3 rounded-lg text-white font-semibold w-fit flex items-center gap-2">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            Discuter ce Projet
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section id="why-us" class="py-24 lg:py-32 bg-navy-800/50 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full">
+            <div class="absolute top-1/4 left-0 w-96 h-96 bg-orange-500/5 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-1/4 right-0 w-96 h-96 bg-navy-600/30 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <span class="text-orange-500 font-semibold tracking-widest uppercase text-sm">Pourquoi Nous Choisir</span>
+                <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl text-white mt-4 mb-6">Votre Partenaire de Confiance</h2>
+                <p class="text-gray-400 text-lg">Horizon BTP & Engineering s'engage a fournir une qualite exceptionnelle et un service fiable pour chaque projet.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 stagger-container" id="why-us-container">
+                <!-- Reason Cards -->
+                <div class="bg-navy-900/50 border border-navy-700 p-8 rounded-2xl stagger-item hover:border-orange-500/50 transition-colors">
+                    <div class="w-14 h-14 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+                    </div>
+                    <h3 class="font-display text-2xl text-white mb-4">Ingenieurs Experimentes</h3>
+                    <p class="text-gray-400">Notre equipe compte plus de 85 ingenieurs et techniciens qualifies avec une expertise diversifiee dans tous les domaines de la construction.</p>
+                </div>
+
+                <div class="bg-navy-900/50 border border-navy-700 p-8 rounded-2xl stagger-item hover:border-orange-500/50 transition-colors">
+                    <div class="w-14 h-14 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+                    </div>
+                    <h3 class="font-display text-2xl text-white mb-4">Equipements Modernes</h3>
+                    <p class="text-gray-400">Nous investissons constamment dans des equipements de pointe et des technologies de construction innovantes pour garantir l'efficacite.</p>
+                </div>
+
+                <div class="bg-navy-900/50 border border-navy-700 p-8 rounded-2xl stagger-item hover:border-orange-500/50 transition-colors">
+                    <div class="w-14 h-14 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                    </div>
+                    <h3 class="font-display text-2xl text-white mb-4">Standards de Securite Eleves</h3>
+                    <p class="text-gray-400">La securite est notre priorite absolue. Nous respectons les normes internationales de securite sur tous nos chantiers.</p>
+                </div>
+
+                <div class="bg-navy-900/50 border border-navy-700 p-8 rounded-2xl stagger-item hover:border-orange-500/50 transition-colors">
+                    <div class="w-14 h-14 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    <h3 class="font-display text-2xl text-white mb-4">Livraison Fiable</h3>
+                    <p class="text-gray-400">Nous nous engageons a respecter les delais convenus. Notre historique montre un taux de livraison a temps de 97%.</p>
+                </div>
+
+                <div class="bg-navy-900/50 border border-navy-700 p-8 rounded-2xl stagger-item hover:border-orange-500/50 transition-colors">
+                    <div class="w-14 h-14 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    <h3 class="font-display text-2xl text-white mb-4">Satisfaction Client</h3>
+                    <p class="text-gray-400">Nous travaillons en etroite collaboration avec nos clients pour comprendre leurs besoins et depasser leurs attentes.</p>
+                </div>
+
+                <div class="bg-navy-900/50 border border-navy-700 p-8 rounded-2xl stagger-item hover:border-orange-500/50 transition-colors">
+                    <div class="w-14 h-14 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                    </div>
+                    <h3 class="font-display text-2xl text-white mb-4">Prix Competitifs</h3>
+                    <p class="text-gray-400">Nous offrons un excellent rapport qualite-prix sans compromis sur les standards de construction et de securite.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-orange-600 to-orange-500"></div>
+        <div class="absolute inset-0 opacity-10">
+            <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+                    <path d="M 10 0 L 0 0 0 10" fill="none" stroke="white" stroke-width="0.5"/>
+                </pattern>
+                <rect width="100%" height="100%" fill="url(#grid)"/>
+            </svg>
+        </div>
+        
+        <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+            <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl text-white mb-6">Pret a Demarrer Votre Projet?</h2>
+            <p class="text-xl text-white/90 mb-10 max-w-2xl mx-auto">Contactez-nous des aujourd'hui pour discuter de votre projet de construction. Notre equipe est prete a vous accompagner.</p>
+            <button data-whatsapp-context="cta_main" class="inline-flex items-center gap-3 bg-white text-orange-600 px-10 py-5 rounded-xl font-bold text-lg hover:bg-gray-100 transition-colors shadow-2xl">
+                <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Demander un Devis Gratuit
+            </button>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 lg:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <span class="text-orange-500 font-semibold tracking-widest uppercase text-sm">Contact</span>
+                <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl text-white mt-4 mb-6">Contactez-Nous</h2>
+                <p class="text-gray-400 text-lg">Notre equipe est disponible pour repondre a toutes vos questions et discuter de vos projets.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div class="reveal-left">
+                    <div class="bg-navy-800/50 border border-navy-700 rounded-2xl p-8 lg:p-10">
+                        <h3 class="font-display text-3xl text-white mb-8">Informations de Contact</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 bg-orange-500/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-white font-semibold mb-1">Telephone</h4>
+                                    <p class="text-gray-400">+225 07 00 00 00 00</p>
+                                    <p class="text-gray-400">+225 07 00 00 00 01</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 bg-orange-500/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-orange-500" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-white font-semibold mb-1">WhatsApp</h4>
+                                    <p class="text-gray-400">+225 07 00 00 00 00</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 bg-orange-500/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-white font-semibold mb-1">Adresse</h4>
+                                    <p class="text-gray-400">Abidjan, Cote d'Ivoire</p>
+                                    <p class="text-gray-400">Plateau, Rue du Commerce</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 bg-orange-500/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-white font-semibold mb-1">Heures d'Ouverture</h4>
+                                    <p class="text-gray-400">Lundi - Vendredi: 8h00 - 18h00</p>
+                                    <p class="text-gray-400">Samedi: 9h00 - 13h00</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-10">
+                            <button data-whatsapp-context="contact_main" class="btn-primary w-full py-5 rounded-xl text-white font-bold text-lg flex items-center justify-center gap-3">
+                                <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                                Demarrer une Conversation WhatsApp
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal-right">
+                    <div class="bg-navy-800/50 border border-navy-700 rounded-2xl overflow-hidden h-full min-h-[500px]">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127014.67363667943!2d-4.089396649999999!3d5.3599517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfc1ebea7b5c6f93%3A0x2c7a6e7c2a6e7c2a!2sAbidjan%2C%20C%C3%B4te%20d&#39;Ivoire!5e0!3m2!1sfr!2sus!4v1699999999999!5m2!1sfr!2sus"
+                            width="100%" 
+                            height="100%" 
+                            style="border:0; min-height: 500px;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Localisation Horizon BTP">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy-900 border-t border-navy-700 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center">
+                            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                        </div>
+                        <div>
+                            <span class="font-display text-xl text-white tracking-wider">HORIZON BTP</span>
+                            <span class="block text-xs text-gray-400 tracking-widest uppercase">Engineering</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-6">Leader en construction et genie civil en Cote d'Ivoire. Qualite, securite et innovation pour tous vos projets.</p>
+                </div>
+
+                <div>
+                    <h4 class="font-display text-lg text-white mb-6">Navigation</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-400 hover:text-orange-500 transition-colors">Accueil</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-orange-500 transition-colors">A Propos</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-orange-500 transition-colors">Services</a></li>
+                        <li><a href="#projects" class="text-gray-400 hover:text-orange-500 transition-colors">Projets</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-orange-500 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-display text-lg text-white mb-6">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#services" class="text-gray-400 hover:text-orange-500 transition-colors">Genie Civil</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-orange-500 transition-colors">Construction Routiere</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-orange-500 transition-colors">Batiments</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-orange-500 transition-colors">Infrastructure</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-orange-500 transition-colors">Gestion de Projets</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-display text-lg text-white mb-6">Contact Rapide</h4>
+                    <button data-whatsapp-context="footer_quick" class="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        WhatsApp
+                    </button>
+                    <p class="text-gray-400 mt-4">+225 07 00 00 00 00</p>
+                    <p class="text-gray-400">Abidjan, Cote d'Ivoire</p>
+                </div>
+            </div>
+
+            <div class="border-t border-navy-700 my-12"></div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 text-sm">2024 Horizon BTP & Engineering. Tous droits reserves.</p>
+                <div class="flex items-center gap-6">
+                    <a href="#" class="text-gray-500 hover:text-orange-500 transition-colors text-sm">Mentions Legales</a>
+                    <a href="#" class="text-gray-500 hover:text-orange-500 transition-colors text-sm">Politique de Confidentialite</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <button data-whatsapp-context="floating_btn" class="whatsapp-float" aria-label="Contacter via WhatsApp">
+        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </button>
+
+    <script src="script.js" type="text/javascript">  
+    </script>
+</body>
+</html>
