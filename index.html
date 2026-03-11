@@ -11,8 +11,23 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
     <script src="/tailwind.config.js"></script>
+    <style>
+        /* Scroll Progress Bar */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: var(--progress-height, 4px);
+            background: linear-gradient(90deg, var(--progress-color) 0%, var(--accent-hover) 100%);
+            z-index: 9999;
+            transition: width 0.1s ease-out;
+        }
+    </style>
 </head>
 <body class="antialiased">
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress" class="scroll-progress"></div>
 
     <!-- Navigation -->
     <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">

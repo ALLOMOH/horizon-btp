@@ -129,6 +129,33 @@
             });
         });
 
+        // Floating WhatsApp Button - Show on Scroll
+        const floatingBtn = document.querySelector('.whatsapp-float');
+        let floatingVisible = false;
+        function handleFloatingBtnVisibility() {
+            const scrollY = window.pageYOffset;
+            if (scrollY > 300 && !floatingVisible) {
+                floatingBtn.classList.add('visible');
+                floatingVisible = true;
+            } else if (scrollY <= 300 && floatingVisible) {
+                floatingBtn.classList.remove('visible');
+                floatingVisible = false;
+            }
+        }
+        window.addEventListener('scroll', handleFloatingBtnVisibility);
+        handleFloatingBtnVisibility();
+
+        // Scroll Progress Bar
+        const scrollProgress = document.getElementById('scroll-progress');
+        function updateScrollProgress() {
+            const scrollTop = window.pageYOffset;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = (scrollTop / docHeight) * 100;
+            scrollProgress.style.width = progress + '%';
+        }
+        window.addEventListener('scroll', updateScrollProgress);
+        updateScrollProgress();
+
         // Initial reveal for hero elements
         document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {

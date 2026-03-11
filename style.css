@@ -1,13 +1,36 @@
 
+/* =============================================================================
+   CUSTOMIZATION SECTION - Modify colors here
+   ============================================================================= */
+        
         :root {
-            --bg: #0a1628;
-            --bg-light: #12213a;
-            --fg: #ffffff;
-            --muted: #8b9cb5;
-            --accent: #ff6b35;
-            --card: #1a2d4d;
-            --border: #243b5e;
+            /* Primary Colors */
+            --bg: #0a1628;                    /* Main background */
+            --bg-light: #12213a;              /* Secondary background */
+            --fg: #2505b4;                    /* Main text color */
+            --muted: #031530;                 /* Muted text color */
+            
+            /* Accent Colors */
+            --accent: #ff6b35;                /* Primary accent (orange) */
+            --accent-hover: #e85a24;          /* Accent hover/darker state */
+            --accent-light: rgba(255, 107, 53, 0.1); /* Accent transparent */
+            
+            /* Card & Border */
+            --card: #1a2d4d;                  /* Card background */
+            --border: #243b5e;                /* Border color */
+            
+            /* WhatsApp */
+            --whatsapp: #25D366;              /* WhatsApp green */
+            --whatsapp-shadow: rgba(37, 211, 102, 0.4);
+            
+            /* Floating Button */
+            --float-size: 64px;                /* Floating button size */
+            --float-bottom: 24px;              /* Distance from bottom */
+            --float-right: 24px;               /* Distance from right */
+            --float-position: 1000;           /* Z-index */
         }
+
+        /* ============================================================================= */
 
         * { scroll-behavior: smooth; }
 
@@ -91,7 +114,7 @@
 
         /* Buttons & Cards */
         .btn-primary {
-            background: linear-gradient(135deg, var(--accent) 0%, #e85a24 100%);
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
             box-shadow: 0 4px 20px rgba(255, 107, 53, 0.3);
             transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
             cursor: pointer;
@@ -147,29 +170,37 @@
         /* WhatsApp Button */
         .whatsapp-float {
             position: fixed;
-            bottom: 24px;
-            right: 24px;
-            z-index: 1000;
-            background: #25D366;
-            width: 64px;
-            height: 64px;
+            bottom: var(--float-bottom);
+            right: var(--float-right);
+            z-index: var(--float-position);
+            background: var(--whatsapp);
+            width: var(--float-size);
+            height: var(--float-size);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            box-shadow: 0 4px 20px var(--whatsapp-shadow);
             transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
             animation: pulse 2s infinite;
             cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transform: scale(0.8);
+        }
+        .whatsapp-float.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: scale(1);
         }
         .whatsapp-float:hover {
             transform: scale(1.1);
-            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.5);
+            box-shadow: 0 8px 30px var(--whatsapp-shadow);
         }
 
         @keyframes pulse {
-            0%, 100% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); }
-            50% { box-shadow: 0 4px 30px rgba(37, 211, 102, 0.6), 0 0 0 10px rgba(37, 211, 102, 0.1); }
+            0%, 100% { box-shadow: 0 4px 20px var(--whatsapp-shadow); }
+            50% { box-shadow: 0 4px 30px var(--whatsapp-shadow), 0 0 0 10px rgba(37, 211, 102, 0.1); }
         }
 
         /* Navigation */
